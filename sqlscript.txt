@@ -1,0 +1,18 @@
+CREATE TABLE status (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    status_code VARCHAR(5) UNIQUE NOT NULL,
+    status_text TEXT NOT NULL,
+    share_option ENUM('University', 'Class', 'Private') NOT NULL,
+    status_date DATE NOT NULL,
+    allow_likes BOOLEAN NOT NULL DEFAULT 0,
+    allow_comments BOOLEAN NOT NULL DEFAULT 0,
+    allow_shares BOOLEAN NOT NULL DEFAULT 0
+);
+
+SELECT * FROM status WHERE status_text LIKE '%$status_text%';
+
+SELECT * FROM status WHERE status_code = '$status_code';
+
+INSERT INTO status (status_code, status_text, share_option, status_date, allow_likes, allow_comments, allow_shares) VALUES ('$status_code', '$status_text', '$share_option', '$status_date', '$allow_likes', '$allow_comments', '$allow_shares');
+
+DROP TABLE status;

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .custom-mt-10 {
+            margin-top: 10rem;
+        }
+
+        .label-text-xl {
+            font-size: 24px;
+            /* Adjust the font size as needed */
+        }
+    </style>
+
+    <title>Status Posting System</title>
+</head>
+
+<body>
+    <header class="bg-info text-white p-4">
+        <div class="container text-center">
+
+            <h1 class="display-4 mb-0">
+                Status Posting System
+            </h1>
+        </div>
+    </header>
+
+    <div class="container text-center custom-mt-10">
+        <form action="searchstatusprocess.php" method="get">
+            <label for="status" class="label-text-xl"><strong>Status:</strong></label>
+
+            <input type="text" name="status" class="form-control-lg mb-3 text-sm" rows="10">
+            <input type="submit" value="Show Results" class="btn btn-primary">
+            <br>
+        </form>
+        <a href="index.html" class="btn btn-secondary my-3">Return to Home Page</a>
+    </div>
+
+</body>
+
+</html>
